@@ -43,6 +43,55 @@ public class P4_tres_en_raya {
         	
         }
         
+        boolean finJuego = false;
+        
+        while (!finJuego) {
+        	
+        	
+        	System.out.println("Tablero:");
+        	
+        	for(int i = 0; i < 3 ; i++) {
+        		
+        	
+        		for (int j = 0; j < 3; j++) {
+                    System.out.print(tablero[i][j] + " ");
+        		
+        	}
+         System.out.println();
+
+        }
+        	
+        System.out.println("Es el turno de " + turno + " (" + simboloTurno + ")");
+
+        int fila;
+        int columna;
+        
+        while(true) {
+        	
+        	System.out.print("introduce una fila (0,1,2)");
+            fila = z.nextInt();
+            System.out.print("Introduce una columna (0, 1, 2): ");
+            columna = z.nextInt();
+            
+
+            if (fila >= 0 && fila < 3 && columna >= 0 && columna < 3 && tablero[fila][columna] == '_') {
+            	
+                tablero[fila][columna] = simboloTurno;
+                break;
+            }else {
+            	
+            System.out.println("Esa casilla ya está ocupada o no es válida. Intentalo de nuevo.");
+	
+            }
+            
+        }
+        
+        
+        
+        
+        
+        
+        }
         
         
         
