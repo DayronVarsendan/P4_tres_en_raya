@@ -103,7 +103,7 @@ public class P4_tres_en_raya {
         
       if(ganador) {
     	  
-      System.out.println( turno + " ha ganad!");
+      System.out.println( turno + " ha ganado");
       finJuego = true;
 
     	  
@@ -133,13 +133,44 @@ public class P4_tres_en_raya {
       }
         
       
+      if(!finJuego) {
+    	  if(turno.equals(jugador1)) {
+    		  
+    		  turno = jugador2;
+    		  
+              simboloTurno = 'O';
+              	  
+    	  }else {
+    		  
+    		  turno = jugador1;
+              simboloTurno = 'X';
+
+    	  }
+      }
       
-      
-      
+      }
         
-        }
+       System.out.println("Tablero final:");
+       for (int i = 0; i < 3; i++) {
+    	   
+            for (int j = 0; j < 3; j++) {
+                System.out.print(tablero[i][j] + " ");
+            }
+            
+            System.out.println();
+        }  
         
         
+       System.out.print("Quieres jugar otra vez? (s/n): ");
+       char respuesta = z.next().charAt(0);
+       z.nextLine(); 
+
+       if (respuesta == 's') {
+           VolverAjugar = true; 
+       } else {
+    	   VolverAjugar = false; 
+           System.out.println("Gracias por jugar");
+       } 
         
         
         
