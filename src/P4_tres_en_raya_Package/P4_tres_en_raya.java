@@ -86,10 +86,56 @@ public class P4_tres_en_raya {
             
         }
         
+        boolean ganador = false;
+
+        for (int i = 0; i < 3; i++) {
+        	
+            if ((tablero[i][0] == simboloTurno && tablero[i][1] == simboloTurno && tablero[i][2] == simboloTurno) ||
+                (tablero[0][i] == simboloTurno && tablero[1][i] == simboloTurno && tablero[2][i] == simboloTurno)) {
+                ganador = true;
+            }
+        }
         
+        if ((tablero[0][0] == simboloTurno && tablero[1][1] == simboloTurno && tablero[2][2] == simboloTurno) ||
+                (tablero[0][2] == simboloTurno && tablero[1][1] == simboloTurno && tablero[2][0] == simboloTurno)) {
+                ganador = true;
+            }
         
+      if(ganador) {
+    	  
+      System.out.println( turno + " ha ganad!");
+      finJuego = true;
+
+    	  
+      }else {
+    	  
+    	  boolean empate = true;
+    	  for(int i = 0; i < 3 ; i++) {
+    		  
+    		  for (int j = 0; j < 3; j++) {
+    			  
+    			  if (tablero [i][j] == '_'){
+    				  
+    				  empate = false;
+    				  
+    				  break;
+    			  }
+    		  }
+    	  }
+    	  
+    	  if(empate) {
+    		  
+    		         System.out.println("Es un empate");
+         finJuego = true;  
+         
+    	  }
+    	  
+      }
         
-        
+      
+      
+      
+      
         
         }
         
